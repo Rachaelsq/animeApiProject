@@ -21,7 +21,6 @@ body, html {
     }
 
     h2 {
-        
         font-family: 'Concert One', cursive;
         font-size: 30px; 
         color: white;   
@@ -62,6 +61,8 @@ body, html {
       display: flex;
       align-items:center;
       justify-content:center
+      max-width: 20%;
+      /* max-width: 100px */
     }
     
     .character:hover {
