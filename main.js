@@ -40,11 +40,11 @@ const displayCharacters = (characters) => {
   .map((character) => {
     return `
     <li class="character">
-      <div>
+      <div class="">
         <h2>${character.title}</h2>
-        <a class="float_right" href="${character.url}"><img src="${character.image_url}"></a>
+        <a class="" href="${character.url}"><img class="" src="${character.image_url}"></a>
       </div>
-     </li>
+    </li>
     `
   })
   .join('');

@@ -1,142 +1,150 @@
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: sans-serif;
 }
 
 
 body, html {
-    background-image: linear-gradient(77deg, #5dbeff 0%, #003a27 100%);
-    }
+background-image: linear-gradient(77deg, #5dbeff 0%, #003a27 100%);
+}
     
     
-    h1 {
-    color: #eee;
-    margin-bottom: 30px;
-    font-family: 'Concert One', cursive;
-    font-size: 70px;    
-    }
+h1 {
+color: #eee;
+margin-bottom: 30px;
+font-family: 'Concert One', cursive;
+font-size: 70px;    
+}
 
-    h2 {
-        font-family: 'Concert One', cursive;
-        font-size: 30px; 
-        color: white;   
-        }
+h2 {
+font-family: 'Concert One', cursive;
+font-size: 30px; 
+color: white;   
+}
+
+/* <!-- 
+==========
+JUMBOTRON
+==========
+--> */
 
 
-    .container {
-        padding: 40px;
-        margin: 0 auto;
-        max-width: 1000px;
-        text-align: center;
+.jumbotronDescription {
+    margin-bottom: 20px;
     }
     
-    #charactersList {
-        padding-inline-start: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        grid-gap: 20px;
-      margin-top: 40px;
-      font-family: 'Concert One', cursive;
-      /* display: flex; */
-      /* justify-content: center;
-      align-items: center; */
-    }
-    
-
-    .character {
-        list-style-type: none;
-        background-color: rgba(191, 208, 255, 0.2);
-        border-radius: 7px;
-        padding: 10px 20px;
-        /* display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-template-areas:
-            'name image' ;
-            'house image'; */
-        text-align: center;
-      display: flex;
-      align-items:center;
-      justify-content:center
-      max-width: 20%;
-      /* max-width: 100px */
-    }
-    
-    .character:hover {
-        border: 2px solid;
-        border-color: rgb(133, 106, 255);
-        color: white;
-        box-shadow: 0 5px 15px -4px #1e0e4b;
-        transform: translateY(-11px);
-        cursor: pointer;
-      }
-
-    img {
-      margin-top: 20px
-    }
-    
-    .character > h2 {
-        grid-area: name;
-        margin-bottom: 0px;
-    }
-    
-    .character > p {
-        grid-area: house;
-        margin: 0;
-        margin-top: -18px;
-    }
-
-    
-    .character > img {
-        max-height: 100px;
-        grid-area: image;
-    }
-    
-    #searchBar {
-        width: 100%;
-        height: 32px;
-        border-radius: 3px;
-        border: 1px solid #eaeaea;
-        padding: 5px 10px;
-        margin-top: 40px;
-        font-size: 12px;
-    }
-    
-    .searchWrapper {
-        position: relative;
-        width: 20vw%; 
-    }
-    
-    
-    .float_right {
-      float: right;
-    }
-
-    /* jumbo */
-    .jumbotronDescription {
-        margin-bottom: 20px;
-    }
-
     .jumbotron {
-        background-color: rgba(173, 195, 255, .18);
-        box-shadow: 0 5px 15px -4px #1e0e4b;
-        border: 2px solid;
-        border-color: rgb(133, 106, 255);
+    background-color: rgba(173, 195, 255, .18);
+    box-shadow: 0 5px 15px -4px #1e0e4b;
+    border: 2px solid;
+    border-color: rgb(133, 106, 255);
     }
-
-    .lead {
-        font-size: 32px;
-        font-family: 'Concert One', cursive;
-        color: white;
-    }
-    /* jumbo */
-
-
-
-
-
     
-      
+    .lead {
+    font-size: 32px;
+    font-family: 'Concert One', cursive;
+    color: white;
+    }
+
+
+/* <!-- 
+==========
+CARDS
+==========
+--> */
+.container {
+padding: 40px;
+margin: 0 auto;
+max-width: 1000px;
+text-align: center;
+}
+    
+#charactersList {
+padding-inline-start: 0;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+grid-gap: 20px;
+margin-top: 40px;
+font-family: 'Concert One', cursive;
+/* display: flex; */
+/* justify-content: center;
+ align-items: center; */
+}
+    
+
+.character {
+    list-style-type: none;
+    background-color: rgba(191, 208, 255, 0.2);
+    border-radius: 7px;
+    padding: 10px 20px;
+    /* display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    'name image' ;
+    house image'; */
+    text-align: center;
+    display: flex;
+    align-items:center;
+    justify-content:center
+    max-width: 20%;
+    }
+    
+.character:hover {
+border: 2px solid;
+border-color: rgb(133, 106, 255);
+color: white;
+box-shadow: 0 5px 15px -4px #1e0e4b;
+transform: translateY(-11px);
+cursor: pointer;
+}
+
+img {
+margin-top: 20px
+}
+
+.character > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+}
+    
+.character > p {
+    grid-area: house;
+    margin: 0;
+    margin-top: -18px;
+}
+
+.character > img {
+    max-height: 100px;
+    grid-area: image;
+}
+    
+/* <!-- 
+==========
+SEARCH
+==========
+--> */
+#searchBar {
+width: 100%;
+height: 32px;
+border-radius: 3px;
+border: 1px solid #eaeaea;
+padding: 5px 10px;
+margin-top: 40px;
+font-size: 12px;
+}
+.searchWrapper {
+position: relative;
+/* width: 50%; 
+ */
+}
+
+.float_right {
+float: right;
+}
+
+
+
