@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jikan API</title>
-        <!-- 
-        ==========
-        FONTS
-        ==========
-        -->
-      <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jikan Anime API Project</title>
+    <!-- 
+    ==========
+    FONTS
+    ==========
+    -->
+    <style>
       @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-      </style>                                                              
-      <style>
       @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
-      </style>
-            
-            <!-- Bootstrap CSS -->
+    </style>                                                              
+    <!-- 
+    ==========
+      BOOTSTRAP
+    ==========
+    -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="main.css" />
       
-      </head>
+</head>
+<!-- 
+==========
+    BODY
+==========
+    -->
 <body>
-<!-- begin search and title -->
 <div class="container">
-    <h1>Anime Shows</h1>
-
+  <h1> 2021 Anime</h1>
     <!-- begin jumbotron -->
-    <div class="jumbotron">
-        <h1 class="display-4"></h1>
-        <p class="lead">The worlds BEST anime search engine for upcoming animes in 2021!</p>
-        <p class="jumbotronDescription">Use the search bar below to search your favorite anime shows and movies. </p>
-        <p class="lead">
-          <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
-        </p>
-    </div>
+  <div class="jumbotron">
+    <h1 class="display-4"></h1>
+      <p class="lead">The worlds BEST anime search engine for upcoming animes in 2021!</p>
+      <p class="jumbotronDescription">Use the search bar below to search your favorite anime shows and movies. </p>
+      <p class="lead">
+      </p>
+  </div>
       <!-- end jumbotron -->
-    <hr class="my-4">
+  <hr class="my-4">
         <!-- 
         ==========
         SEARCH
         ==========
         -->    
-      <div class="searchWrapper">
-        <input type="text" class="searchBar" id="searchBar" placeholder="search for an anime" />
-      </div>
+  <div class="searchWrapper">
+    <input type="text" class="searchBar" id="searchBar" placeholder="search for an anime" />
+  </div>
 
         <!-- 
         ==========
           API
         ==========
         -->
-            <ul id="charactersList"></ul>
-          </aside>
-
-          <script src="main.js"></script>
+      <ul id="animesList"></ul>
+    <script src="main.js"></script>
         </body>
         
         </html>

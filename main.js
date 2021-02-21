@@ -5,20 +5,20 @@ SEARCH
 ==========
 */
 const searchBar = document.getElementById('searchBar');
-const charactersList = document.getElementById('charactersList');
+const animesList = document.getElementById('animesList');
 
 searchBar.addEventListener('keyup', (e) =>{
   const searchString = e.target.value.toLowerCase();
   console.log(searchString)
   
 //filter
-  const filteredCharacters = hpCharacters.top.filter((character) => {
+  const filteredAnimes = animeTitles.top.filter((anime) => {
     return (
-    character.title.toLowerCase().includes(searchString) ||
-    character.type.toLowerCase().includes(searchString) 
+    anime.title.toLowerCase().includes(searchString) ||
+    anime.type.toLowerCase().includes(searchString) 
     );
   });
-  displayCharacters(filteredCharacters);
+  displayAnimes(filteredAnimes);
 });
 
 
@@ -27,14 +27,14 @@ searchBar.addEventListener('keyup', (e) =>{
 API
 ==========
 */
-const getCharacters = async () => {
+const getAnimes = async () => {
   try {
     const res = await fetch(`
 https://api.jikan.moe/v3/top/anime/1/upcoming
 `);
-    hpCharacters = await res.json();
-    console.log(hpCharacters); 
-    displayCharacters(hpCharacters.top);
+    animeTitles = await res.json();
+    console.log(animeTitles); 
+    displayAnimes(animeTitles.top);
   } catch(err) {
     console.error(err);
   }
@@ -45,21 +45,22 @@ https://api.jikan.moe/v3/top/anime/1/upcoming
 ============
 RENDER TO DOM
 ============
-*/const displayCharacters = (characters) => {
-  const htmlString = characters
-  .map((character) => {
+*/
+const displayAnimes = (animes) => {
+  const htmlString = animes
+  .map((anime) => {
     return `
-    <li class="character">
+    <li class="anime">
       <div class="">
-        <h2>${character.title}</h2>
-        <a class="" href="${character.url}"><img class="" src="${character.image_url}"></a>
+        <h2>${anime.title}</h2>
+        <a class="" href="${anime.url}"><img class="" src="${anime.image_url}"></a>
       </div>
     </li>
     `
   })
   .join('');
-  charactersList.innerHTML = htmlString;
+  animesList.innerHTML = htmlString;
 };
 
 //calling function
-getCharacters();
+getAnimes();
