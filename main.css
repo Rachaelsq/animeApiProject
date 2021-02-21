@@ -40,6 +40,10 @@ background-color: rgba(173, 195, 255, .18);
 box-shadow: 0 5px 15px -4px #1e0e4b;
 border: 2px solid;
 border-color: rgb(133, 106, 255);
+margin-bottom: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+
 }
     
 .lead {
@@ -49,15 +53,24 @@ color: white;
 }
 
 
+
 /* <!-- 
 ==========
 CARDS
 ==========
 --> */
+
+#gridFlexId{
+    display: flex;
+align-items:center;
+justify-content:center;
+margin-left: 7rem;
+}
 .container {
 padding: 40px;
 margin: 0 auto;
 text-align: center;
+
 }
     
 #animesList {
@@ -108,9 +121,10 @@ height: 62px;
 border-radius: 3px;
 border: 1px solid #eaeaea;
 padding: 5px 10px;
-margin-top: 40px;
+margin-top: 10px;
 font-size: 18px;
-min-width: 500px;
+min-width: 430px;
+
 }
 
 .searchWrapper {
@@ -118,6 +132,8 @@ display: flex;
 align-items:center;
 justify-content:center;
 text-align: center;
+margin: 5px 10px;
+
 }
 
 
