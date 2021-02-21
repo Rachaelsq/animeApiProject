@@ -1,8 +1,11 @@
+
+/* 
+==========
+SEARCH
+==========
+*/
 const searchBar = document.getElementById('searchBar');
 const charactersList = document.getElementById('charactersList');
-
-//what is this?? why is this a variable?
-const trying = "one piece bleach"
 
 searchBar.addEventListener('keyup', (e) =>{
   const searchString = e.target.value.toLowerCase();
@@ -19,7 +22,11 @@ searchBar.addEventListener('keyup', (e) =>{
 });
 
 
-//api call
+/* 
+==========
+API
+==========
+*/
 const getCharacters = async () => {
   try {
     const res = await fetch(`
@@ -34,8 +41,11 @@ https://api.jikan.moe/v3/top/anime/1/upcoming
 };
 
 
-// showing api on the dom
-const displayCharacters = (characters) => {
+/* 
+============
+RENDER TO DOM
+============
+*/const displayCharacters = (characters) => {
   const htmlString = characters
   .map((character) => {
     return `
